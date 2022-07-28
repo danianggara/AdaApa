@@ -59,12 +59,28 @@
 				BABE1C17289247070094A55E /* AppDelegate.swift */,
 				BABE1C19289247070094A55E /* SceneDelegate.swift */,
 				BABE1C1B289247070094A55E /* ViewController.swift */,
+				BABE1C2C289248A40094A55E /* Model */,
+				BABE1C2B2892488B0094A55E /* View */,
 				BABE1C1D289247070094A55E /* Main.storyboard */,
 				BABE1C20289247090094A55E /* Assets.xcassets */,
 				BABE1C22289247090094A55E /* LaunchScreen.storyboard */,
 				BABE1C25289247090094A55E /* Info.plist */,
 			);
 			path = AdaApa;
+			sourceTree = "<group>";
+		};
+		BABE1C2B2892488B0094A55E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BABE1C2C289248A40094A55E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
