@@ -7,12 +7,11 @@
 
 import UIKit
 
-class FeaturedNewsViewController: UIViewController {
+class FeaturedNewsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Featured News"
         // Do any additional setup after loading the view.
     }
     

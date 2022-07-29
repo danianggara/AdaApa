@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  RecentNewsViewController.swift
 //  AdaApa
 //
 //  Created by Dani Anggara on 28/07/22.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class RecentNewsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Recent News"
-        
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

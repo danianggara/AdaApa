@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA8C71A92892BBC00010F61C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71A82892BBC00010F61C /* MainViewController.swift */; };
+		BA8C71A92892BBC00010F61C /* RecentNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71A82892BBC00010F61C /* RecentNewsViewController.swift */; };
 		BA8C71AB2892BBE20010F61C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71AA2892BBE20010F61C /* TabBarController.swift */; };
 		BA8C71AD2892BC0E0010F61C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71AC2892BC0E0010F61C /* DetailViewController.swift */; };
 		BA8C71AF2892BC400010F61C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71AE2892BC400010F61C /* ProfileViewController.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA8C71A82892BBC00010F61C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BA8C71A82892BBC00010F61C /* RecentNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentNewsViewController.swift; sourceTree = "<group>"; };
 		BA8C71AA2892BBE20010F61C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA8C71AC2892BC0E0010F61C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA8C71AE2892BC400010F61C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		BABE1C2B2892488B0094A55E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA8C71A82892BBC00010F61C /* MainViewController.swift */,
+				BA8C71A82892BBC00010F61C /* RecentNewsViewController.swift */,
 				BA8C71AA2892BBE20010F61C /* TabBarController.swift */,
 				BA8C71AC2892BC0E0010F61C /* DetailViewController.swift */,
 				BA8C71AE2892BC400010F61C /* ProfileViewController.swift */,
@@ -191,7 +191,7 @@
 			files = (
 				BA8C71AF2892BC400010F61C /* ProfileViewController.swift in Sources */,
 				BA8C71B22892BC580010F61C /* NewsTableViewCell.swift in Sources */,
-				BA8C71A92892BBC00010F61C /* MainViewController.swift in Sources */,
+				BA8C71A92892BBC00010F61C /* RecentNewsViewController.swift in Sources */,
 				BA8C71AB2892BBE20010F61C /* TabBarController.swift in Sources */,
 				BA8C71AD2892BC0E0010F61C /* DetailViewController.swift in Sources */,
 				BABE1C18289247070094A55E /* AppDelegate.swift in Sources */,

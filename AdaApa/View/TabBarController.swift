@@ -12,15 +12,23 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mainViewController = MainViewController()
-        let featuredNewsViewController = FeaturedNewsViewController()
-        
-        mainViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
-        featuredNewsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
-        
-        viewControllers = [mainViewController, featuredNewsViewController]
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let recentNewsView = RecentNewsViewController()
+        let recentNewsViewItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
+        
+        recentNewsView.tabBarItem = recentNewsViewItem
+        
+        let featuredNewsView = FeaturedNewsViewController()
+        let featuredNewsViewItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+        
+        featuredNewsView.tabBarItem = featuredNewsViewItem
+        
+        self.viewControllers = [recentNewsView, featuredNewsView]
     }
     
 
