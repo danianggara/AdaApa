@@ -12,6 +12,7 @@ class RecentNewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Recent News"
 
         // Do any additional setup after loading the view.
     }
