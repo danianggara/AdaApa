@@ -7,18 +7,10 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate{
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.delegate = self
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         let recentNewsView = UINavigationController(rootViewController: RecentNewsViewController())
         let recentNewsViewItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
@@ -31,12 +23,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         featuredNewsView.tabBarItem = featuredNewsViewItem
         
         self.viewControllers = [recentNewsView, featuredNewsView]
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
+        // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
