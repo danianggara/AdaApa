@@ -23,13 +23,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         let recentNewsView = UINavigationController(rootViewController: RecentNewsViewController())
         let recentNewsViewItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
         
-        recentNewsView.title = "Recent News"
         recentNewsView.tabBarItem = recentNewsViewItem
         
         let featuredNewsView = UINavigationController(rootViewController: FeaturedNewsViewController())
         let featuredNewsViewItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
         
-        featuredNewsView.title = "Featured News"
         featuredNewsView.tabBarItem = featuredNewsViewItem
         
         self.viewControllers = [recentNewsView, featuredNewsView]

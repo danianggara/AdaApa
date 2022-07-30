@@ -12,7 +12,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "My Profile"
+        navigationItem.title = "My Profile"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
     }

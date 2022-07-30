@@ -12,7 +12,8 @@ class RecentNewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Recent News"
+        navigationItem.title = "Recent News"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
     }

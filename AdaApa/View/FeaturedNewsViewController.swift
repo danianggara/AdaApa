@@ -12,7 +12,8 @@ class FeaturedNewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Featured News"
+        navigationItem.title = "Featured News"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
     }
