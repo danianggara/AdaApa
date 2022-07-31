@@ -12,13 +12,16 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let recentNewsIcon = UIImage(systemName: "newspaper.circle")
+        let featuredNewsIcon = UIImage(systemName: "star.circle")
+        
         let recentNewsView = UINavigationController(rootViewController: RecentNewsViewController())
-        let recentNewsViewItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
+        let recentNewsViewItem = UITabBarItem(title: "Recent News", image: recentNewsIcon, tag: 0)
         
         recentNewsView.tabBarItem = recentNewsViewItem
         
         let featuredNewsView = UINavigationController(rootViewController: FeaturedNewsViewController())
-        let featuredNewsViewItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+        let featuredNewsViewItem = UITabBarItem(title: "Featured News", image: featuredNewsIcon, tag: 1)
         
         featuredNewsView.tabBarItem = featuredNewsViewItem
         
