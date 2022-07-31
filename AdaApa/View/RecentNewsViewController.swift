@@ -7,22 +7,15 @@
 
 import UIKit
 
-class RecentNewsViewController: UITableViewController {
+class RecentNewsViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(systemName: "person.circle")
-
         navigationItem.title = "Recent News"
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapButton))]
         navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
-    }
-    
-    @objc func didTapButton() {
-        print("Tapped")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

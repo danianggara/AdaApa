@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeaturedNewsViewController: UITableViewController {
+class FeaturedNewsViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
