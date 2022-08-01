@@ -7,13 +7,12 @@
 
 import UIKit
 
-class RecentNewsViewController: BaseTableViewController {
+class LocalNewsViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Recent News"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Local News"
 
         // Do any additional setup after loading the view.
     }

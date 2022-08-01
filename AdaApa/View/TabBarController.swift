@@ -12,20 +12,22 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let recentNewsIcon = UIImage(systemName: "newspaper.circle")
-        let featuredNewsIcon = UIImage(systemName: "star.circle")
+        let localNewsIcon = UIImage(systemName: "book.fill")
+        let globalNewsIcon = UIImage(systemName: "heart.fill")
         
-        let recentNewsView = UINavigationController(rootViewController: RecentNewsViewController())
-        let recentNewsViewItem = UITabBarItem(title: "Recent News", image: recentNewsIcon, tag: 0)
+        let localNewsView = UINavigationController(rootViewController: LocalNewsViewController())
+        let localNewsViewItem = UITabBarItem(title: "Local News", image: localNewsIcon, tag: 0)
         
-        recentNewsView.tabBarItem = recentNewsViewItem
+        localNewsView.tabBarItem = localNewsViewItem
         
-        let featuredNewsView = UINavigationController(rootViewController: FeaturedNewsViewController())
-        let featuredNewsViewItem = UITabBarItem(title: "Featured News", image: featuredNewsIcon, tag: 1)
+        let globalNewsView = UINavigationController(rootViewController: GlobalNewsViewController())
+        let globalNewsViewItem = UITabBarItem(title: "Global News", image: globalNewsIcon, tag: 1)
         
-        featuredNewsView.tabBarItem = featuredNewsViewItem
+        globalNewsView.tabBarItem = globalNewsViewItem
         
-        self.viewControllers = [recentNewsView, featuredNewsView]
+        self.viewControllers = [localNewsView, globalNewsView]
+        
+        UITabBar.appearance().tintColor = .systemCyan
         
         // Do any additional setup after loading the view.
     }
