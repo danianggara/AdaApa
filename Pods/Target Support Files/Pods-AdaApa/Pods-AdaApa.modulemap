@@ -1,0 +1,6 @@
+framework module Pods_AdaApa {
+  umbrella header "Pods-AdaApa-umbrella.h"
+
+  export *
+  module * { export * }
+}
