@@ -62,7 +62,7 @@ class BaseTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as? NewsTableViewCell {
             let listNews = listLocalNews[indexPath.row]
             cell.titleLabel.text = listNews.title
-            cell.dateLabel.text = listNews.publishedAt
+            cell.descriptionLabel.text = listNews.articleDescription
             return cell
         }
         return UITableViewCell()
