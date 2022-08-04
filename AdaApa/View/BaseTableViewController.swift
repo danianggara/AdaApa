@@ -27,7 +27,10 @@ class BaseTableViewController: UIViewController, UITableViewDelegate, UITableVie
         navigationController?.navigationBar.tintColor = .systemCyan
         
         loadListNews()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,7 +49,7 @@ class BaseTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.listLocalNews = localNews
                 self.tableView.reloadData()
             case .failure(let error):
-                print("Error loading local news")
+                print("Error loading local news, \(error)")
             }
         }
     }
