@@ -12,8 +12,8 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let localNewsIcon = UIImage(systemName: "book.fill")
-        let globalNewsIcon = UIImage(systemName: "heart.fill")
+        let localNewsIcon = UIImage(systemName: "house.fill")
+        let globalNewsIcon = UIImage(systemName: "globe")
         
         let localNewsView = UINavigationController(rootViewController: LocalNewsViewController())
         let localNewsViewItem = UITabBarItem(title: "Local News", image: localNewsIcon, tag: 0)

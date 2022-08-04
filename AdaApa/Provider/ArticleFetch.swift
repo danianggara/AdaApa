@@ -12,7 +12,7 @@ final class APIFetcher {
     
     struct Constants {
         static let localNewsURL = URL(string: "https://newsapi.org/v2/top-headlines?country=id&apiKey=35661ca6b93a416290622b3df6d21255")
-        static let globalNewsURL = URL(string: "https://newsapi.org/v2/top-headlines/sources?apiKey=35661ca6b93a416290622b3df6d21255")
+        static let globalNewsURL = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=35661ca6b93a416290622b3df6d21255")
     }
     
     private init() {
@@ -44,7 +44,7 @@ final class APIFetcher {
         task.resume()
     }
     
-    public func getGlobalNews(completion: @escaping (Result<[String], Error>) -> Void) {
+    public func getGlobalNews(completion: @escaping (Result<[Article], Error>) -> Void) {
         guard let urlGlobal = Constants.globalNewsURL else {
             return
         }
@@ -58,6 +58,7 @@ final class APIFetcher {
                 
                 do {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
+                    completion(.success(result.articles))
                 }
                 catch {
                     completion(.failure(error))
