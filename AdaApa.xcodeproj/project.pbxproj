@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA572247289622DD00652E7B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA572246289622DD00652E7B /* BaseTableViewController.swift */; };
+		2032B35B9B635264266830E0 /* Pods_AdaApa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB4B9317066257EB689AAEC /* Pods_AdaApa.framework */; };
+		BA572247289622DD00652E7B /* BaseNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA572246289622DD00652E7B /* BaseNewsViewController.swift */; };
 		BA57224C2896405B00652E7B /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57224B2896405B00652E7B /* ArticleModel.swift */; };
 		BA57224E289640A300652E7B /* ArticleFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57224D289640A300652E7B /* ArticleFetch.swift */; };
 		BA8C71A92892BBC00010F61C /* LocalNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C71A82892BBC00010F61C /* LocalNewsViewController.swift */; };
@@ -24,7 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA572246289622DD00652E7B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		4CB4B9317066257EB689AAEC /* Pods_AdaApa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdaApa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD99CDBC712D1E0F9274F3 /* Pods-AdaApa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdaApa.debug.xcconfig"; path = "Target Support Files/Pods-AdaApa/Pods-AdaApa.debug.xcconfig"; sourceTree = "<group>"; };
+		BA572246289622DD00652E7B /* BaseNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNewsViewController.swift; sourceTree = "<group>"; };
 		BA57224B2896405B00652E7B /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		BA57224D289640A300652E7B /* ArticleFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetch.swift; sourceTree = "<group>"; };
 		BA8C71A82892BBC00010F61C /* LocalNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNewsViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		BABE1C20289247090094A55E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABE1C23289247090094A55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABE1C25289247090094A55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9C955601D2A5DA082F6ED7 /* Pods-AdaApa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdaApa.release.xcconfig"; path = "Target Support Files/Pods-AdaApa/Pods-AdaApa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2032B35B9B635264266830E0 /* Pods_AdaApa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				BABE1C16289247070094A55E /* AdaApa */,
 				BABE1C15289247070094A55E /* Products */,
+				BF8F6FEAD904484D849F752B /* Pods */,
+				EB9550E64277147D902B11A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +101,7 @@
 				BA8C71B02892BC580010F61C /* NewsTableViewCell.swift */,
 				BA8C71B12892BC580010F61C /* NewsTableViewCell.xib */,
 				BA8C71B42892C12C0010F61C /* GlobalNewsViewController.swift */,
-				BA572246289622DD00652E7B /* BaseTableViewController.swift */,
+				BA572246289622DD00652E7B /* BaseNewsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +122,23 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		BF8F6FEAD904484D849F752B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63DD99CDBC712D1E0F9274F3 /* Pods-AdaApa.debug.xcconfig */,
+				FB9C955601D2A5DA082F6ED7 /* Pods-AdaApa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB9550E64277147D902B11A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CB4B9317066257EB689AAEC /* Pods_AdaApa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BABE1C28289247090094A55E /* Build configuration list for PBXNativeTarget "AdaApa" */;
 			buildPhases = (
+				E0B88CE6E34074CBA99EDFFD /* [CP] Check Pods Manifest.lock */,
 				BABE1C10289247070094A55E /* Sources */,
 				BABE1C11289247070094A55E /* Frameworks */,
 				BABE1C12289247070094A55E /* Resources */,
+				97EC1647E09F775EB967E17E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,13 +207,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97EC1647E09F775EB967E17E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdaApa/Pods-AdaApa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdaApa/Pods-AdaApa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdaApa/Pods-AdaApa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B88CE6E34074CBA99EDFFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdaApa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BABE1C10289247070094A55E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BA57224E289640A300652E7B /* ArticleFetch.swift in Sources */,
-				BA572247289622DD00652E7B /* BaseTableViewController.swift in Sources */,
+				BA572247289622DD00652E7B /* BaseNewsViewController.swift in Sources */,
 				BA8C71AF2892BC400010F61C /* ProfileViewController.swift in Sources */,
 				BA8C71B22892BC580010F61C /* NewsTableViewCell.swift in Sources */,
 				BA8C71A92892BBC00010F61C /* LocalNewsViewController.swift in Sources */,
@@ -330,6 +398,7 @@
 		};
 		BABE1C29289247090094A55E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DD99CDBC712D1E0F9274F3 /* Pods-AdaApa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +427,7 @@
 		};
 		BABE1C2A289247090094A55E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB9C955601D2A5DA082F6ED7 /* Pods-AdaApa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -7,14 +7,33 @@
 
 import UIKit
 
-class LocalNewsViewController: BaseTableViewController {
+class LocalNewsViewController: BaseNewsViewController {
+    
+    override var listLocalNews: [Article] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Local News"
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func loadListNews() {
+        APIFetcher.shared.getGlobalNews { response in
+            switch response {
+            case .success(let localNews):
+                self.listLocalNews = localNews
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("Error loading local news, \(error)")
+            }
+        }
+    }
     }
     
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GlobalNewsViewController: BaseTableViewController {
+class GlobalNewsViewController: BaseNewsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class BaseTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BaseNewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let tableView = UITableView()
     var listLocalNews: [Article] = []
@@ -18,7 +19,7 @@ class BaseTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let image = UIImage(systemName: "person.fill")
         
-        tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+        tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "newsCell")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -47,30 +48,33 @@ class BaseTableViewController: UIViewController, UITableViewDelegate, UITableVie
             switch response {
             case .success(let localNews):
                 self.listLocalNews = localNews
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             case .failure(let error):
                 print("Error loading local news, \(error)")
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.listLocalNews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as? NewsTableViewCell {
-            let listNews = listLocalNews[indexPath.row]
-            cell.titleLabel.text = listNews.title
-            cell.descriptionLabel.text = listNews.articleDescription
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
+        let listNews = listLocalNews[indexPath.row]
+        cell.titleLabel.text = listNews.title
+        cell.descriptionLabel.text = listNews.articleDescription
+        
+        let imageURL = listNews.urlToImage
+        cell.imageLabel.kf.setImage(with: URL(string: imageURL))
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-    
 }
