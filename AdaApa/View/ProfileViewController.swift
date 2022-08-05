@@ -2,31 +2,27 @@
 //  ProfileViewController.swift
 //  AdaApa
 //
-//  Created by Dani Anggara on 28/07/22.
+//  Created by Dani Anggara on 05/08/22.
 //
 
 import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileFullName: UILabel!
+    @IBOutlet weak var profileUsername: UILabel!
+    @IBOutlet weak var profileEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "My Profile"
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        // Do any additional setup after loading the view.
+        //self.tabBarController?.tabBar.isHidden = true
+        
+        profileImage.layer.cornerRadius = 60
+        profileImage.layer.borderWidth = 8
+        profileImage.layer.borderColor = UIColor.systemCyan.cgColor
+        profileImage.clipsToBounds = true
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

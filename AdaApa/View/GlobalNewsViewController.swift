@@ -1,5 +1,5 @@
 //
-//  FeaturedNewsViewController.swift
+//  GlobalNewsViewController.swift
 //  AdaApa
 //
 //  Created by Dani Anggara on 28/07/22.
@@ -48,8 +48,10 @@ class GlobalNewsViewController: BaseViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+        let detailView = DetailViewController()
+        detailView.newsDetail = listGlobalNews[indexPath.row]
+        detailView.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
-    
 }
+    

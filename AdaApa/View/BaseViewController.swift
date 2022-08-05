@@ -1,5 +1,5 @@
 //
-//  BaseTableViewController.swift
+//  BaseViewController.swift
 //  AdaApa
 //
 //  Created by Dani Anggara on 31/07/22.
@@ -27,12 +27,13 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItems = [UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapButton))]
         navigationController?.navigationBar.tintColor = .systemCyan
-        
+
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        self.tableView.reloadData()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -40,7 +41,9 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func didTapButton() {
-        print("Tapped")
+        let profileView = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        profileView.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(profileView, animated: true)
     }
     
     func loadListNews() {

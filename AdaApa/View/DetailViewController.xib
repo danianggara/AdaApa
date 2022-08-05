@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="AdaApa" customModuleProvider="target">
+            <connections>
+                <outlet property="newsContent" destination="8pa-iQ-VbB" id="cql-wW-fOW"/>
+                <outlet property="newsDate" destination="CtJ-GU-BPv" id="O41-Yk-60b"/>
+                <outlet property="newsImage" destination="wDg-eT-Ovr" id="cyu-jV-v3S"/>
+                <outlet property="newsTitle" destination="Sbh-M5-bcc" id="6wl-UW-1we"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wDg-eT-Ovr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="235"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="235" id="x0V-LZ-rse"/>
+                        <constraint firstAttribute="width" constant="414" id="zYY-jR-4gW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-M5-bcc">
+                    <rect key="frame" x="8" y="289" width="398" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="HHk-IT-Ln3"/>
+                        <constraint firstAttribute="width" constant="398" id="ZfF-eB-wwh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtJ-GU-BPv">
+                    <rect key="frame" x="8" y="384" width="398" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="HfI-2Z-j3X"/>
+                        <constraint firstAttribute="width" constant="398" id="xMB-97-o1A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pa-iQ-VbB">
+                    <rect key="frame" x="8" y="424" width="398" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aZu-su-rcb"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="398" id="rq3-JJ-Z24"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="News Content">
+                            <attributes>
+                                <font key="NSFont" metaFont="system" size="16"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wDg-eT-Ovr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4HT-i5-L8l"/>
+                <constraint firstItem="wDg-eT-Ovr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8cy-F0-1CP"/>
+                <constraint firstItem="wDg-eT-Ovr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9oT-Mt-G9K"/>
+                <constraint firstItem="Sbh-M5-bcc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Euv-Vt-Aft"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CtJ-GU-BPv" secondAttribute="trailing" constant="8" id="Gul-If-X9x"/>
+                <constraint firstItem="8pa-iQ-VbB" firstAttribute="top" secondItem="CtJ-GU-BPv" secondAttribute="bottom" constant="20" id="Vli-F5-SYp"/>
+                <constraint firstItem="CtJ-GU-BPv" firstAttribute="top" secondItem="Sbh-M5-bcc" secondAttribute="bottom" constant="5" id="Z5s-aB-q9f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8pa-iQ-VbB" secondAttribute="trailing" constant="8" id="eKL-hK-eR4"/>
+                <constraint firstItem="8pa-iQ-VbB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="hth-eM-Gl3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sbh-M5-bcc" secondAttribute="trailing" constant="8" id="i6c-l3-9Kg"/>
+                <constraint firstItem="Sbh-M5-bcc" firstAttribute="top" secondItem="wDg-eT-Ovr" secondAttribute="bottom" constant="10" id="izm-Z1-L30"/>
+                <constraint firstItem="CtJ-GU-BPv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="zdS-DB-tpM"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
