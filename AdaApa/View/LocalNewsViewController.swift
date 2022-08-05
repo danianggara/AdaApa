@@ -8,7 +8,7 @@
 import UIKit
 
 class LocalNewsViewController: BaseViewController {
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

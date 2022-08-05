@@ -8,7 +8,7 @@
 import UIKit
 
 class GlobalNewsViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,4 +55,4 @@ class GlobalNewsViewController: BaseViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-    
+

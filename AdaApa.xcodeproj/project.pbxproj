@@ -24,6 +24,8 @@
 		BAFFF4C9289CC9AA0023CBEE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFFF4C7289CC9AA0023CBEE /* ProfileViewController.xib */; };
 		BAFFF4CC289CE8320023CBEE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFF4CA289CE8320023CBEE /* DetailViewController.swift */; };
 		BAFFF4CD289CE8320023CBEE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFFF4CB289CE8320023CBEE /* DetailViewController.xib */; };
+		BAFFF4D0289D1A6C0023CBEE /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFF4CF289D1A6C0023CBEE /* StringExt.swift */; };
+		BAFFF4D2289D1CB50023CBEE /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFF4D1289D1CB50023CBEE /* DateExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		BAFFF4C7289CC9AA0023CBEE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		BAFFF4CA289CE8320023CBEE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BAFFF4CB289CE8320023CBEE /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		BAFFF4CF289D1A6C0023CBEE /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		BAFFF4D1289D1CB50023CBEE /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		FB9C955601D2A5DA082F6ED7 /* Pods-AdaApa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdaApa.release.xcconfig"; path = "Target Support Files/Pods-AdaApa/Pods-AdaApa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 			children = (
 				BABE1C17289247070094A55E /* AppDelegate.swift */,
 				BABE1C19289247070094A55E /* SceneDelegate.swift */,
+				BAFFF4CE289D1A150023CBEE /* Extensions */,
 				BABE1C2D28924BED0094A55E /* Provider */,
 				BABE1C2C289248A40094A55E /* Model */,
 				BABE1C2B2892488B0094A55E /* View */,
@@ -126,6 +131,15 @@
 				BA57224D289640A300652E7B /* ArticleFetch.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		BAFFF4CE289D1A150023CBEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAFFF4CF289D1A6C0023CBEE /* StringExt.swift */,
+				BAFFF4D1289D1CB50023CBEE /* DateExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BF8F6FEAD904484D849F752B /* Pods */ = {
@@ -264,6 +278,7 @@
 			files = (
 				BAFFF4CC289CE8320023CBEE /* DetailViewController.swift in Sources */,
 				BA57224E289640A300652E7B /* ArticleFetch.swift in Sources */,
+				BAFFF4D2289D1CB50023CBEE /* DateExt.swift in Sources */,
 				BA572247289622DD00652E7B /* BaseViewController.swift in Sources */,
 				BAFFF4C8289CC9AA0023CBEE /* ProfileViewController.swift in Sources */,
 				BA8C71B22892BC580010F61C /* NewsTableViewCell.swift in Sources */,
@@ -272,6 +287,7 @@
 				BA57224C2896405B00652E7B /* ArticleModel.swift in Sources */,
 				BABE1C18289247070094A55E /* AppDelegate.swift in Sources */,
 				BA8C71B52892C12C0010F61C /* GlobalNewsViewController.swift in Sources */,
+				BAFFF4D0289D1A6C0023CBEE /* StringExt.swift in Sources */,
 				BABE1C1A289247070094A55E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

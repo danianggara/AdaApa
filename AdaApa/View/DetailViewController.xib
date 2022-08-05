@@ -71,9 +71,6 @@
                         <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                         <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                     </buttonConfiguration>
-                    <connections>
-                        <action selector="readmoreButtonAction:" destination="-1" eventType="touchUpInside" id="Qhs-4V-oid"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

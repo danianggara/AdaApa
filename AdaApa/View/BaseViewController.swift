@@ -27,13 +27,13 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItems = [UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(didTapButton))]
         navigationController?.navigationBar.tintColor = .systemCyan
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
-
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -50,7 +50,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadListNews() {
         
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

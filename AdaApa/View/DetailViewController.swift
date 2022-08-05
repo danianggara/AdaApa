@@ -16,8 +16,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var newsDate: UILabel!
     @IBOutlet weak var newsContent: UILabel!
     @IBOutlet weak var readmoreButton: UIButton!
-    @IBAction func readmoreButtonAction(_ sender: Any) {
-    }
     
     var listNews: [Article] = []
     var newsDetail: Article?
@@ -34,7 +32,6 @@ class DetailViewController: UIViewController {
         loadLocalDetailNews()
         loadGlobalDetailNews()
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +54,7 @@ class DetailViewController: UIViewController {
                 if let result = self.newsDetail {
                     DispatchQueue.main.async {
                         self.newsTitle.text = result.title
-                        self.newsDate.text = result.publishedAt
+                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " - ")
                         self.newsContent.text = result.content
                         let imageURL = result.urlToImage
                         self.newsImage.kf.setImage(with: URL(string: imageURL))
@@ -77,7 +74,7 @@ class DetailViewController: UIViewController {
                 if let result = self.newsDetail {
                     DispatchQueue.main.async {
                         self.newsTitle.text = result.title
-                        self.newsDate.text = result.publishedAt
+                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " - ")
                         self.newsContent.text = result.content
                         let imageURL = result.urlToImage
                         self.newsImage.kf.setImage(with: URL(string: imageURL))

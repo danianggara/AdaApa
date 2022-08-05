@@ -21,7 +21,7 @@ struct Article: Codable {
     let title, articleDescription: String
     let url: String
     let urlToImage: String
-    let publishedAt: String
+    let publishedAt: Date
     let content: String?
 
     enum CodingKeys: String, CodingKey {
@@ -38,7 +38,8 @@ struct Article: Codable {
         articleDescription = try values.decodeIfPresent(String.self, forKey: .articleDescription) ?? ""
         url = try values.decodeIfPresent(String.self, forKey: .url) ?? ""
         urlToImage = try values.decodeIfPresent(String.self, forKey: .urlToImage) ?? ""
-        publishedAt = try values.decodeIfPresent(String.self, forKey: .publishedAt) ?? ""
+        let publishedAtString = try values.decodeIfPresent(String.self, forKey: .publishedAt) ?? ""
+        publishedAt = publishedAtString.date(format: .dateTimeISO8601) ?? Date(timeIntervalSince1970: 0)
         content = try values.decodeIfPresent(String.self, forKey: .content) ?? ""
     }
 }
