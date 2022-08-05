@@ -13,16 +13,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileFullName: UILabel!
     @IBOutlet weak var profileUsername: UILabel!
     @IBOutlet weak var profileEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "My Profile"
-        //self.tabBarController?.tabBar.isHidden = true
         
         profileImage.layer.cornerRadius = 60
         profileImage.layer.borderWidth = 8
         profileImage.layer.borderColor = UIColor.systemCyan.cgColor
         profileImage.clipsToBounds = true
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
