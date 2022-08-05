@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pM5-d5-qj4">
-                        <rect key="frame" x="15" y="25" width="180" height="45"/>
+                        <rect key="frame" x="15" y="18" width="180" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="1um-ma-jAg"/>
                             <constraint firstAttribute="height" constant="45" id="kFI-hy-4mS"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,10 +36,10 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article desc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTK-kW-iaX">
-                        <rect key="frame" x="15" y="78" width="180" height="37"/>
+                        <rect key="frame" x="15" y="68" width="180" height="52"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="HH3-Kd-o9x"/>
-                            <constraint firstAttribute="height" constant="37" id="Y87-Xl-eHa"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="Y87-Xl-eHa"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.33868153890000002" green="0.33868153890000002" blue="0.33868153890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -47,13 +47,14 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="VTK-kW-iaX" secondAttribute="bottom" constant="25" id="BpW-7r-wa6"/>
                     <constraint firstAttribute="trailing" secondItem="EHO-Mq-yKb" secondAttribute="trailing" constant="15" id="CDG-8e-QbB"/>
+                    <constraint firstItem="EHO-Mq-yKb" firstAttribute="leading" secondItem="VTK-kW-iaX" secondAttribute="trailing" constant="25" id="Isi-Nn-AKw"/>
+                    <constraint firstItem="VTK-kW-iaX" firstAttribute="top" secondItem="pM5-d5-qj4" secondAttribute="bottom" constant="5" id="Rms-97-ScU"/>
                     <constraint firstItem="pM5-d5-qj4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="UIt-fp-EWA"/>
                     <constraint firstItem="EHO-Mq-yKb" firstAttribute="leading" secondItem="pM5-d5-qj4" secondAttribute="trailing" constant="25" id="dOo-s1-ksx"/>
                     <constraint firstAttribute="bottom" secondItem="EHO-Mq-yKb" secondAttribute="bottom" constant="12" id="i3k-Zf-usF"/>
                     <constraint firstItem="VTK-kW-iaX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="j11-Dx-9q7"/>
-                    <constraint firstItem="pM5-d5-qj4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="l9e-K4-eRB"/>
+                    <constraint firstItem="pM5-d5-qj4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="l9e-K4-eRB"/>
                     <constraint firstAttribute="bottom" secondItem="EHO-Mq-yKb" secondAttribute="bottom" constant="12" id="wTw-K6-6fg"/>
                     <constraint firstItem="EHO-Mq-yKb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="y6y-Nl-7pk"/>
                 </constraints>

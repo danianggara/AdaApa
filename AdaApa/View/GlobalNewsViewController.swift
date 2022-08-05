@@ -52,6 +52,7 @@ class GlobalNewsViewController: BaseViewController {
         detailView.newsDetail = listGlobalNews[indexPath.row]
         detailView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detailView, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
     

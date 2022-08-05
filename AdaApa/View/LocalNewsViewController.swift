@@ -52,5 +52,6 @@ class LocalNewsViewController: BaseViewController {
         detailView.newsDetail = listLocalNews[indexPath.row]
         detailView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detailView, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

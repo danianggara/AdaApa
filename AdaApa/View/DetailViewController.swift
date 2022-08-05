@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDate: UILabel!
     @IBOutlet weak var newsContent: UILabel!
+    @IBOutlet weak var readmoreButton: UIButton!
+    @IBAction func readmoreButtonAction(_ sender: Any) {
+    }
     
     var listNews: [Article] = []
     var newsDetail: Article?
@@ -24,6 +28,8 @@ class DetailViewController: UIViewController {
         newsContent.numberOfLines = 0;
         newsContent.adjustsFontSizeToFitWidth = false
         newsContent.minimumScaleFactor = 0.5
+        
+        readmoreButton.addTarget(self, action: #selector(self.readmoreButtonTap), for: .touchUpInside)
         
         loadLocalDetailNews()
         loadGlobalDetailNews()
@@ -36,6 +42,12 @@ class DetailViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
     }
     
+    @objc private func readmoreButtonTap(_ sender: Any) {
+        if let articleURL = URL(string: newsDetail?.url ?? "") {
+            let safariView = SFSafariViewController(url: articleURL)
+            present(safariView, animated: true, completion: nil)
+        }
+    }
     
     private func loadLocalDetailNews() {
         APIFetcher.shared.getLocalNews { result in
