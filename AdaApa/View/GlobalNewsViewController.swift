@@ -38,11 +38,11 @@ class GlobalNewsViewController: BaseViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
         let listNews = listGlobalNews[indexPath.row]
-        cell.titleLabel.text = listNews.title
-        cell.descriptionLabel.text = listNews.articleDescription
+        cell.newsTitle.text = listNews.title
+        cell.newsDescription.text = listNews.articleDescription
         
         let imageURL = listNews.urlToImage
-        cell.imageLabel.kf.setImage(with: URL(string: imageURL))
+        cell.newsImage.kf.setImage(with: URL(string: imageURL), placeholder: UIImage(systemName: "xmark.rectangle.portrait"))
         
         return cell
     }

@@ -30,9 +30,9 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.tableView.reloadData()
+//    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
