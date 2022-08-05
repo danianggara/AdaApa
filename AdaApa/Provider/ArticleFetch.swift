@@ -16,21 +16,18 @@ final class APIFetcher {
     }
     
     private init() {
-        
     }
     
     public func getLocalNews(completion: @escaping (Result<[Article], Error>) -> Void) {
         guard let urlLocal = Constants.localNewsURL else {
             return
         }
-        
         let task = URLSession.shared.dataTask(with: urlLocal) { data, _, error in
             
             if let error = error {
                 completion(.failure(error))
             }
             else if let data = data {
-                
                 do {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
                     completion(.success(result.articles))
@@ -40,7 +37,6 @@ final class APIFetcher {
                 }
             }
         }
-        
         task.resume()
     }
     
@@ -48,14 +44,11 @@ final class APIFetcher {
         guard let urlGlobal = Constants.globalNewsURL else {
             return
         }
-        
         let task = URLSession.shared.dataTask(with: urlGlobal) { data, _, error in
-            
             if let error = error {
                 completion(.failure(error))
             }
             else if let data = data {
-                
                 do {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
                     completion(.success(result.articles))
@@ -65,7 +58,6 @@ final class APIFetcher {
                 }
             }
         }
-        
         task.resume()
     }
 }
