@@ -18,7 +18,7 @@ class GlobalNewsViewController: BaseViewController {
     }
     
     override func loadListNews() {
-        APIFetcher.shared.getGlobalNews { response in
+        ArticleFetch.shared.getGlobalNews { response in
             switch response {
             case .success(let globalNews):
                 self.listGlobalNews = globalNews

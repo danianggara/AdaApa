@@ -18,7 +18,7 @@ class LocalNewsViewController: BaseViewController {
     }
     
     override func loadListNews() {
-        APIFetcher.shared.getLocalNews { response in
+        ArticleFetch.shared.getLocalNews { response in
             switch response {
             case .success(let localNews):
                 self.listLocalNews = localNews

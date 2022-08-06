@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class APIFetcher {
-    static let shared = APIFetcher()
+final class ArticleFetch {
+    static let shared = ArticleFetch()
     
     struct Constants {
         static let localNewsURL = URL(string: "https://newsapi.org/v2/everything?domains=detik.com&apiKey=35661ca6b93a416290622b3df6d21255")

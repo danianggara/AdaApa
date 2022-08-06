@@ -31,17 +31,17 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-M5-bcc">
-                    <rect key="frame" x="8" y="289" width="398" height="90"/>
+                    <rect key="frame" x="8" y="289" width="398" height="27.5"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="HHk-IT-Ln3"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="HHk-IT-Ln3"/>
                         <constraint firstAttribute="width" constant="398" id="ZfF-eB-wwh"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtJ-GU-BPv">
-                    <rect key="frame" x="8" y="384" width="398" height="20"/>
+                    <rect key="frame" x="8" y="321.5" width="398" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="HfI-2Z-j3X"/>
                         <constraint firstAttribute="width" constant="398" id="xMB-97-o1A"/>
@@ -51,7 +51,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pa-iQ-VbB">
-                    <rect key="frame" x="8" y="424" width="398" height="40"/>
+                    <rect key="frame" x="8" y="361.5" width="398" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aZu-su-rcb"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="398" id="rq3-JJ-Z24"/>
@@ -61,7 +61,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-uZ-30T">
-                    <rect key="frame" x="8" y="489" width="398" height="38"/>
+                    <rect key="frame" x="8" y="426.5" width="398" height="38"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="gAQ-7Z-L72"/>
                         <constraint firstAttribute="width" constant="398" id="yjJ-oC-E3d"/>

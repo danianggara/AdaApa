@@ -18,7 +18,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         view.addSubview(tableView)
         
-        let image = UIImage(systemName: "person.fill")
+        let image = UIImage(systemName: "person.circle.fill")
         
         tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "newsCell")
         tableView.dataSource = self

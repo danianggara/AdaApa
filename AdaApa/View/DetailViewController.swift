@@ -47,41 +47,41 @@ class DetailViewController: UIViewController {
     }
     
     private func loadLocalDetailNews() {
-        APIFetcher.shared.getLocalNews { result in
+        ArticleFetch.shared.getLocalNews { result in
             switch result {
             case .success(let detail):
                 self.listNews = detail
                 if let result = self.newsDetail {
                     DispatchQueue.main.async {
                         self.newsTitle.text = result.title
-                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " - ")
+                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " by ")
                         self.newsContent.text = result.content
                         let imageURL = result.urlToImage
                         self.newsImage.kf.setImage(with: URL(string: imageURL))
                     }
                 }
             case .failure(let error):
-                print("Failed to get detail news, \(error.localizedDescription)")
+                print("Failed to get detail local news, \(error.localizedDescription)")
             }
         }
     }
     
     private func loadGlobalDetailNews() {
-        APIFetcher.shared.getGlobalNews { result in
+        ArticleFetch.shared.getGlobalNews { result in
             switch result {
             case .success(let detail):
                 self.listNews = detail
                 if let result = self.newsDetail {
                     DispatchQueue.main.async {
                         self.newsTitle.text = result.title
-                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " - ")
+                        self.newsDate.text = [result.publishedAt.string(format: "MMMM dd, yyyy h:mm a"), result.source?.name ?? ""].joined(separator: " by ")
                         self.newsContent.text = result.content
                         let imageURL = result.urlToImage
                         self.newsImage.kf.setImage(with: URL(string: imageURL))
                     }
                 }
             case .failure(let error):
-                print("Failed to get detail news, \(error.localizedDescription)")
+                print("Failed to get detail global news, \(error.localizedDescription)")
             }
         }
     }
