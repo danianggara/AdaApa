@@ -15,10 +15,6 @@ final class ArticleFetch {
         static let globalNewsURL = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=35661ca6b93a416290622b3df6d21255")
     }
     
-    private init() {
-        
-    }
-    
     public func getLocalNews(completion: @escaping (Result<[Article], Error>) -> Void) {
         guard let urlLocal = Constants.localNewsURL else {
             return
